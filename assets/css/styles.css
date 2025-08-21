@@ -80,6 +80,10 @@ body {
 .btn-ghost { background: rgba(148,163,184,0.1); color: var(--text); border-color: rgba(148,163,184,0.25); }
 .btn:focus-visible { outline: none; box-shadow: 0 0 0 3px rgba(56,189,248,0.35); }
 
+/* Button/CTA overflow fixes */
+.btn { white-space: normal; overflow-wrap: anywhere; word-break: normal; }
+.cta-row .btn, .card-actions .btn { min-width: 0; }
+
 /* Lists */
 .bullets { margin: 1rem 0 0; padding-left: 1rem; color: var(--muted); }
 .bullets li + li { margin-top: .4rem; }
@@ -110,6 +114,9 @@ body {
 @media (max-width: 640px) {
   .hero { padding: 3.2rem 0 2rem; }
   .footer-inner { flex-direction: column; align-items: flex-start; }
+}
+@media (max-width: 480px) {
+  .card-actions .btn { flex-basis: 100%; }
 }
 @media (max-width: 400px) {
   .btn { padding: .5rem .8rem; font-size: .96rem; }
